@@ -4,9 +4,6 @@
              x:Class="ShellLessonStep2.Views.Page1"
              Title="Page1">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Page 1"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+       
     </VerticalStackLayout>
 </ContentPage>
