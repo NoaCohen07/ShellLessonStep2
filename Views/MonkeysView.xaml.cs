@@ -1,9 +1,11 @@
+using ShellLessonStep2.ViewModels;
 namespace ShellLessonStep2.Views;
 
-public partial class Page2 : ContentPage
+public partial class MonkeysView : ContentPage
 {
-	public Page2()
+	public MonkeysView(MonkeysViewModel vm)
 	{
+		this.BindingContext = vm;
 		InitializeComponent();
 	}
 }

@@ -6,26 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using ShellLessonStep2.Models;
 using ShellLessonStep2.Services;
-using Xamarin.Google.Crypto.Tink.Mac;
+
 
 namespace ShellLessonStep2.ViewModels
 {
     public class CatsViewModel:ViewModelBase
     {
-        public CatsViewModel()
+        public CatsViewModel(AnimalService service)
         {
-            animals = new ObservableCollection<Animal>();
+            IList<Animal> list = service.GetCats();
+            cats = new ObservableCollection<Animal>(list);
+         
         }
-        private ObservableCollection<Animal> animals;
-        public ObservableCollection<Animal> Animals
+        private ObservableCollection<Animal> cats;
+        public ObservableCollection<Animal> Cats
         {
             get
             {
-                return this.animals;
+                return this.cats;
             }
             set
             {
-                this.animals = value;
+                this.cats = value;
                 OnPropertyChanged();
             }
         }

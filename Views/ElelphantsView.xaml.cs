@@ -1,14 +1,13 @@
+using ShellLessonStep2.ViewModels;
+
 namespace ShellLessonStep2.Views;
 
-public partial class Page3 : ContentPage
+public partial class ElephantsView : ContentPage
 {
-	public Page3()
+	public ElephantsView(ElephantsViewModel vm)
 	{
+		this.BindingContext = vm;
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-		Shell.Current.GoToAsync("modalPage");
-    }
 }
